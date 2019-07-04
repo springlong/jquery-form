@@ -78,7 +78,7 @@ var formBox = $.form('#formBox', {
         'letter': '必须是字母',
         'length(6)': '请填写至少6个字符',
         'length(,20)': '请填写不超过20个字符',
-        'mustHaveLetterA': function(value, callback) {
+        'mustHaveLetterA': function(value) {
           // 通过回调函数自定义校验规则，name名称不限制
           if (value.indexOf('a') === -1) {
             // 校验错误返回错误提示
@@ -87,7 +87,7 @@ var formBox = $.form('#formBox', {
           // 校验正确返货true或undefined
           return true;
         },
-        'ajaxValid': function(value, callback) {
+        'ajaxValid': function(value) {
           // 通过回调函数自定义校验规则，name名称不限制
           var result = false;
 
